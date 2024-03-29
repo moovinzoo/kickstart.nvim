@@ -646,7 +646,6 @@ require('lazy').setup({
     'Mofiqul/adwaita.nvim',
     lazy = false,
     priority = 1000,
-
     -- configure and set on startup
     config = function()
       vim.g.adwaita_darker = true -- for darker version
