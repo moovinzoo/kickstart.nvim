@@ -656,8 +656,12 @@ require('lazy').setup({
       vim.g.adwaita_disable_cursorline = true -- to disable cursorline
       vim.g.adwaita_transparent = true -- makes the background transparent
       vim.cmd.colorscheme 'adwaita'
-      -- -- You can configure highlights by doing something like:
-      -- vim.cmd.hi 'Comment gui=none'
+      -- -- Expose border between horizontal/vertical splits
+      vim.cmd.hi 'VertSplit guibg=#555555'
+      vim.cmd.hi 'StatusLine guibg=#555555'
+      vim.cmd.hi 'StatusLineNC guibg=#555555 guifg=#000000'
+      vim.cmd.hi 'MiniStatuslineFilename guibg=#BBBBBB guifg=#000000'
+      vim.cmd.hi 'MiniStatuslineModeNormal guibg=#000000'
     end,
   },
 
@@ -705,6 +709,7 @@ require('lazy').setup({
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
+
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
