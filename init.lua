@@ -116,6 +116,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- -- Closes terminal buffers if the job exited without error
+-- vim.cmd.autocmd "TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | endif"
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
