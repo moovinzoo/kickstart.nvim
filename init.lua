@@ -755,6 +755,12 @@ require('lazy').setup({
     end,
   },
 
+  {
+    'akinsho/toggleterm.nvim',
+    version = '*',
+    config = true,
+  },
+
   { -- Dim inactive window
     'levouh/tint.nvim',
     config = function()
