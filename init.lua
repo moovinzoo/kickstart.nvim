@@ -767,9 +767,10 @@ require('lazy').setup({
     -- config = true,
     config = function()
       require('toggleterm').setup {}
-      vim.keymap.set('n', '<leader>t.', '<cmd>ToggleTerm dir=%:p:h<CR>', { desc = 'Toggle [T]erminal on [.]Current dir' })
       -- Toggle below [T]erminal on [~]
       vim.keymap.set('n', '<leader>t~', '<cmd>ToggleTerm<CR>', { desc = 'Toggle below [T]erminal on [~]' })
+      -- Toggle below [T]erminal on [.]
+      vim.keymap.set('n', '<leader>t.', '<cmd>ToggleTerm dir=%:p:h<CR>', { desc = 'Toggle below [T]erminal on [.]' })
     end,
   },
 
