@@ -273,3 +273,25 @@ sudo dnf install -y gcc make git ripgrep fd-find neovim
 ```
 </details>
 
+<!-- TODO: func01) remember last cursor location -->
+<!-- TODO: func02) make ]c, [c, H/L/vv mappings -->
+<!-- TODO: func03) configure tabstop -->
+<!-- TODO: func04) setup lsp with Java, javascript -->
+<!-- --------priority high------------- -->
+<!-- TODO: func05) consider to adopt nvim-java plugin -->
+<!-- TODO: func06) apply multi-config -->
+<!-- TODO: func07) setup window-async-terminal -->
+<!-- TODO: func08) turn on title -->
+<!-- TODO: func09) checkup undofile supports before save -->
+<!-- --------priority mid------------- -->
+<!-- TODO: func10) resolve conflicting keymaps -->
+<!-- TODO: func11) enable FZF so that could auto complete command using ** -->
+<!-- TODO: func12) how to traverse quickfix items? --make keymap, (if could including refresh prob) -->
+<!-- TODO: func13) make window-border by border or highlight -->
+<!-- TODO: func14) restore :DiffOrig -->
+<!-- --------priority low------------- -->
+<!-- TODO: func15) restore netrw, tagbar -->
+<!-- TODO: func16) improve telescope to source pwd to be buffer's location -->
+<!-- TODO: func17) implement markdown preview functionality -->
+<!-- TODO: func18) restore commandline C+sth functionality -->
+<!-- TODO: func19) look for shared quickfix window methodology -->
