@@ -869,7 +869,7 @@ require('lazy').setup({
     'andymass/vim-matchup',
   },
 
-  {
+  { -- Enable smooth-scrolling
     'karb94/neoscroll.nvim',
     config = function()
       require('neoscroll').setup {}
