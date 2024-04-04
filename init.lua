@@ -865,7 +865,7 @@ require('lazy').setup({
         'n',
         '<leader>tl',
         '<cmd>lua _lazygit_toggle()<CR>',
-        { noremap = true, silent = true, desc = 'Toggle float [T]erminal on . and run [L]azygit' }
+        { noremap = true, silent = true, desc = 'Toggle float [T]erminal on . w/ [L]azygit' }
       )
     end,
   },
