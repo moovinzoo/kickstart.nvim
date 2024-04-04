@@ -205,6 +205,7 @@ require('lazy').setup({
         ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+        ['<leader>t'] = { name = '[T]erminal', _ = 'which_key_ignore' },
       }
     end,
   },
@@ -758,7 +759,12 @@ require('lazy').setup({
   {
     'akinsho/toggleterm.nvim',
     version = '*',
-    config = true,
+    -- config = true,
+    config = function()
+      require('toggleterm').setup {}
+      vim.keymap.set('n', '<leader>t~', '<cmd>ToggleTerm<CR>', { desc = 'Toggle [T]erminal on [~]Home dir' })
+      vim.keymap.set('n', '<leader>t.', '<cmd>ToggleTerm dir=%:p:h<CR>', { desc = 'Toggle [T]erminal on [.]Current dir' })
+    end,
   },
 
   { -- Dim inactive window
