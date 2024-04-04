@@ -786,9 +786,9 @@ require('lazy').setup({
           vim.api.nvim_buf_set_keymap(term.bufnr, 'n', 'q', '<cmd>close<CR>', { noremap = true, silent = true })
         end,
         -- function to run on closing the terminal
-        on_close = function(term)
-          vim.cmd 'startinsert!'
-        end,
+        -- on_close = function(term)
+        --   vim.cmd 'startinsert!'
+        -- end,
       }
 
       function _lazygit_toggle()
