@@ -795,8 +795,7 @@ require('lazy').setup({
         lazygit:toggle()
       end
 
-      -- vim.api.nvim_set_keymap(
-      vim.keymap.set(
+      vim.keymap.set( -- vim.api.nvim_set_keymap(
         'n',
         '<leader>tl',
         '<cmd>lua _lazygit_toggle()<CR>',
