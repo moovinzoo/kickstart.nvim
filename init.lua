@@ -201,6 +201,17 @@ require('lazy').setup({
           return '<Ignore>'
         end, { expr = true, desc = 'Go to prev [C]hange' })
 
+        -- Actions
+        map('n', '<leader>gr', gs.reset_hunk, { desc = '[G]itsigns [R]eset hunk' })
+        map('n', '<leader>gR', gs.reset_buffer, { desc = '[G]itsigns [R]eset buffer' })
+        map('n', '<leader>gb', gs.toggle_current_line_blame, { desc = '[G]itsigns toggle line [B]lame' })
+        map('n', '<leader>gB', function()
+          gs.blame_line { full = true }
+        end, { desc = '[G]itsigns full [B]lame on current line' })
+        map('n', '<leader>gd', gs.diffthis, { desc = '[G]itsigns [D]iffOrig' })
+        map('n', '<leader>gD', function()
+          gs.diffthis '~'
+        end, { desc = '[G]itsigns [D]iffOrig w/o collapse' })
       end,
     },
   },
@@ -238,6 +249,7 @@ require('lazy').setup({
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
         ['<leader>t'] = { name = '[T]erminal', _ = 'which_key_ignore' },
+        ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
       }
     end,
   },
