@@ -85,6 +85,10 @@ vim.keymap.set({ 'n', 'v' }, 'H', '^', { noremap = true, silent = true, desc = '
 vim.keymap.set({ 'n', 'v' }, 'L', 'g_', { noremap = true, silent = true, desc = 'Go to last letter' })
 vim.keymap.set('n', 'Q', '<cmd>q<CR>', { noremap = true, silent = true, desc = 'Quit' })
 
+-- Restore shell keymaps
+vim.keymap.set({ 'i', 'c' }, '<C-a>', '<Home>', { noremap = true, silent = true, desc = 'Go to Home' })
+vim.keymap.set({ 'i', 'c' }, '<C-e>', '<End>', { noremap = true, silent = true, desc = 'Go to End' })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
