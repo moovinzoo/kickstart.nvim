@@ -126,6 +126,18 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Jump to the last known cursor position
+vim.api.nvim_create_autocmd('BufReadPost', {
+  desc = 'Jump to the last known cursor position',
+  group = vim.api.nvim_create_augroup('jump-to-last-cursor-location', { clear = true }),
+  callback = function()
+    local line = vim.fn.line '\'"'
+    if line >= 1 and line <= vim.fn.line '$' and vim.bo.filetype ~= 'commit' and not vim.tbl_contains({ 'xxd', 'gitrebase' }, vim.bo.filetype) then
+      vim.cmd 'normal! g`"'
+    end
+  end,
+})
+
 -- -- Closes terminal buffers if the job exited without error
 -- vim.cmd.autocmd "TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | endif"
 
