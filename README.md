@@ -287,8 +287,9 @@ sudo dnf install -y gcc make git ripgrep fd-find neovim
 - [x] ~~Implement markdown preview funcionality~~ Just use kitty-split + entr + glow
 - [x] ~~Resolve conflicting keymaps~~ Cannot solve, plugin issue
 - [x] Make keymaps for traversing quickfix items
+- [x] Make keymaps for navigating buffers
 <!-- TODO: Setup universal tabstops -->
-- [ ] Configure tabstop
+- [ ] Configure universal tabstop
 <!-- TODO: Setup LSP; java, javascript, docker, lua(opt), python(opt) -->
 - [ ] Setup lsp; java, javascript, docker
 <!-- TODO: Enable feature/window-async-terminal w/window-async-terminal, w/vim-test-->
