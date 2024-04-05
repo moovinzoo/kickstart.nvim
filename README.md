@@ -288,15 +288,11 @@ sudo dnf install -y gcc make git ripgrep fd-find neovim
 - [x] ~~Resolve conflicting keymaps~~ Cannot solve, plugin issue
 - [x] Make keymaps for traversing quickfix items
 - [x] Make keymaps for navigating buffers
+- [x] Enable tagbar support
 <!-- TODO: Setup universal tabstops -->
 - [ ] Configure universal tabstop
 <!-- TODO: Setup LSP; java, javascript, docker, lua(opt), python(opt) -->
 - [ ] Setup lsp; java, javascript, docker
 <!-- TODO: Enable feature/window-async-terminal w/window-async-terminal, w/vim-test-->
-- [ ] setup window-async-terminal
-<!-- TODO: Add plugin/netrw -->
-<!-- TODO: Add plugin/tagbar -->
-<!-- TODO: Add plugin/vim-startify -->
-<!-- TODO: Add plugin/vim-wiki -->
-- [ ] Add plugins; netrw, tagbar, startify, vimwiki
-- [ ] Add optional plugins; nvim-java
+- [ ] Setup window-async-terminal
+- [ ] Add plugins; startify, vimwiki, nvim-java(optional)
