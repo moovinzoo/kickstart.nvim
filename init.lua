@@ -92,6 +92,14 @@ vim.keymap.set('n', 'Q', '<cmd>q<CR>', { noremap = true, silent = true, desc = '
 vim.keymap.set({ 'i', 'c' }, '<C-a>', '<Home>', { noremap = true, silent = true, desc = 'Go to Home' })
 vim.keymap.set({ 'i', 'c' }, '<C-e>', '<End>', { noremap = true, silent = true, desc = 'Go to End' })
 
+-- Support quickfix item traverse
+vim.keymap.set('n', ']q', '<cmd>:cnext<CR>', { noremap = true, silent = true, desc = 'Go to next [Q]uickfix item' })
+vim.keymap.set('n', '[q', '<cmd>:cprevious<CR>', { noremap = true, silent = true, desc = 'Go to prev [Q]uickfix item' })
+
+-- Support buffer traverse
+vim.keymap.set('n', ']b', '<cmd>:bnext<CR>', { noremap = true, silent = true, desc = 'Go to next [B]uffer' })
+vim.keymap.set('n', '[b', '<cmd>:bprevious<CR>', { noremap = true, silent = true, desc = 'Go to next [B]uffer' })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.

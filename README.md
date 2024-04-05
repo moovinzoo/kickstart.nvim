@@ -286,9 +286,7 @@ sudo dnf install -y gcc make git ripgrep fd-find neovim
 - [x] ~~Improve Telescope to use buffer dir~~ There exists built-in method of Telescope
 - [x] ~~Implement markdown preview funcionality~~ Just use kitty-split + entr + glow
 - [x] ~~Resolve conflicting keymaps~~ Cannot solve, plugin issue
-- [x] ~~Make keymaps to traverse quickfix items~~ Just use `:cn`, `:cp`
-<!-- TODO: Set keymap/traverse-TodoQuickFixitems -->
-- [x] Make keymaps to traverse TodoQuickFix items
+- [x] Make keymaps for traversing quickfix items
 <!-- TODO: Setup universal tabstops -->
 - [ ] Configure tabstop
 <!-- TODO: Setup LSP; java, javascript, docker, lua(opt), python(opt) -->
