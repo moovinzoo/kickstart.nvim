@@ -893,6 +893,107 @@ require('lazy').setup({
     'andymass/vim-matchup',
   },
 
+  { -- Tagbar
+    'preservim/tagbar',
+    config = function()
+      -- set initial width
+      vim.g.tagbar_width = 35
+      -- hide help banner
+      vim.g.tagbar_compact = 2
+      -- to be sorted according to their order
+      vim.g.tagbar_sort = 0
+      -- make keymap that toggles tagbar
+      vim.keymap.set('n', '<leader>b', '<cmd>TagbarToggle<CR>', { noremap = true, silent = true, desc = 'Toggle Tag[b]ar' })
+    end,
+  },
+
+  {
+    'ludovicchabant/vim-gutentags',
+    config = function()
+      -- https://www.reddit.com/r/vim/comments/d77t6j/guide_how_to_setup_ctags_with_gutentags_properly/
+      vim.g.gutentags_ctags_exclude = {
+        '*.git',
+        '*.svg',
+        '*.hg',
+        '*/tests/*',
+        'build',
+        'dist',
+        '*sites/*/files/*',
+        'bin',
+        'node_modules',
+        'bower_components',
+        'cache',
+        'compiled',
+        'docs',
+        'example',
+        'bundle',
+        'vendor',
+        '*.md',
+        '*-lock.json',
+        '*.lock',
+        '*bundle*.js',
+        '*build*.js',
+        '.*rc*',
+        '*.json',
+        '*.min.*',
+        '*.map',
+        '*.bak',
+        '*.zip',
+        '*.pyc',
+        '*.class',
+        '*.sln',
+        '*.Master',
+        '*.csproj',
+        '*.tmp',
+        '*.csproj.user',
+        '*.cache',
+        '*.pdb',
+        'tags*',
+        'cscope.*',
+        -- '*.css',
+        -- '*.less',
+        -- '*.scss',
+        '*.exe',
+        '*.dll',
+        '*.mp3',
+        '*.ogg',
+        '*.flac',
+        '*.swp',
+        '*.swo',
+        '*.bmp',
+        '*.gif',
+        '*.ico',
+        '*.jpg',
+        '*.png',
+        '*.rar',
+        '*.zip',
+        '*.tar',
+        '*.tar.gz',
+        '*.tar.xz',
+        '*.tar.bz2',
+        '*.pdf',
+        '*.doc',
+        '*.docx',
+        '*.ppt',
+        '*.pptx',
+      }
+
+      vim.g.gutentags_add_default_project_roots = false
+      vim.g.gutentags_project_root = { 'package.json', '.git' }
+      vim.g.gutentags_cache_dir = vim.fn.stdpath 'data' .. '/ctags'
+      vim.g.gutentags_generate_on_new = true
+      vim.g.gutentags_generate_on_missing = true
+      vim.g.gutentags_generate_on_write = true
+      vim.g.gutentags_generate_on_empty_buffer = true
+      vim.g.gutentags_modules = true
+      vim.cmd [[command! -nargs=0 GutentagsClearCache call system('rm ' . g:gutentags_cache_dir . '/*')]]
+      vim.g.gutentags_ctags_extra_args = { '--tag-relative=yes', '--fields=+ailmnS' }
+
+      -- custom
+      vim.g.gutentags_modules = { 'ctags' }
+    end,
+  },
+
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
