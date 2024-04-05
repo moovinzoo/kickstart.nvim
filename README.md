@@ -273,25 +273,31 @@ sudo dnf install -y gcc make git ripgrep fd-find neovim
 ```
 </details>
 
-<!-- TODO: func01) remember last cursor location -->
-<!-- TODO: func02) make ]c, [c, H/L/vv mappings -->
-<!-- TODO: func03) configure tabstop -->
-<!-- TODO: func04) setup lsp with Java, javascript -->
-<!-- --------priority high------------- -->
-<!-- TODO: func05) consider to adopt nvim-java plugin -->
-<!-- TODO: func06) apply multi-config -->
-<!-- TODO: func07) setup window-async-terminal -->
-<!-- TODO: func08) turn on title -->
-<!-- TODO: func09) checkup undofile supports before save -->
-<!-- --------priority mid------------- -->
-<!-- TODO: func10) resolve conflicting keymaps -->
-<!-- TODO: func11) enable FZF so that could auto complete command using ** -->
-<!-- TODO: func12) how to traverse quickfix items? --make keymap, (if could including refresh prob) -->
-<!-- TODO: func13) make window-border by border or highlight -->
-<!-- TODO: func14) restore :DiffOrig -->
-<!-- --------priority low------------- -->
-<!-- TODO: func15) restore netrw, tagbar -->
-<!-- TODO: func16) improve telescope to source pwd to be buffer's location -->
-<!-- TODO: func17) implement markdown preview functionality -->
-<!-- TODO: func18) restore commandline C+sth functionality -->
-<!-- TODO: func19) look for shared quickfix window methodology -->
+## Todos
+- [x] Remember last cursor location
+- [x] Enable basic keymaps in normal mode
+- [x] Restore shell-style keymaps in insert/command mode
+- [x] Turn on title
+- [x] Support undos even after saving
+- [x] Enable window borders
+- [x] ~~Restore `:DiffOrig`~~ There exists built-in method of Gitsign
+- [x] ~~Apply multi-config~~ To make easy to fork upstream
+- [x] ~~Enable FZF~~ Nvim supports **(wildcard) by default
+- [x] ~~Improve Telescope to use buffer dir~~ There exists built-in method of Telescope
+- [x] ~~Implement markdown preview funcionality~~ Just use kitty-split + entr + glow
+- [x] ~~Resolve conflicting keymaps~~ Cannot solve, plugin issue
+- [x] ~~Make keymaps to traverse quickfix items~~ Just use `:cn`, `:cp`
+<!-- TODO: Set keymap/traverse-TodoQuickFixitems -->
+- [x] Make keymaps to traverse TodoQuickFix items
+<!-- TODO: Setup universal tabstops -->
+- [ ] Configure tabstop
+<!-- TODO: Setup LSP; java, javascript, docker, lua(opt), python(opt) -->
+- [ ] Setup lsp; java, javascript, docker
+<!-- TODO: Enable feature/window-async-terminal w/window-async-terminal, w/vim-test-->
+- [ ] setup window-async-terminal
+<!-- TODO: Add plugin/netrw -->
+<!-- TODO: Add plugin/tagbar -->
+<!-- TODO: Add plugin/vim-startify -->
+<!-- TODO: Add plugin/vim-wiki -->
+- [ ] Add plugins; netrw, tagbar, startify, vimwiki
+- [ ] Add optional plugins; nvim-java
