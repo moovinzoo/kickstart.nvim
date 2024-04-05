@@ -875,12 +875,19 @@ require('lazy').setup({
     end,
   },
 
-  { -- Dim inactive window
-    'levouh/tint.nvim',
-    config = function()
-      require('tint').setup {}
-    end,
-  },
+  -- { -- Enable smooth-scrolling
+  --   'karb94/neoscroll.nvim',
+  --   config = function()
+  --     require('neoscroll').setup {}
+  --   end,
+  -- },
+
+  -- { -- Dim inactive window
+  --   'levouh/tint.nvim',
+  --   config = function()
+  --     require('tint').setup {}
+  --   end,
+  -- },
 
   { -- Enhance matchpairs(%) functionality
     'andymass/vim-matchup',
