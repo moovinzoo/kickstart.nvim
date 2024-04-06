@@ -632,16 +632,6 @@ require('lazy').setup({
         -- is found.
         -- javascript = { { "prettierd", "prettier" } },
       },
-      -- Jump to the last known cursor position
-      vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
-        pattern = { '*.lua' },
-        desc = 'Format lua',
-        group = vim.api.nvim_create_augroup('format-lua', { clear = true }),
-        callback = function()
-          -- vim.opt_local.equalprg='js-beautify -f -'
-          vim.opt_local.equalprg = 'stylua'
-        end,
-      }),
     },
   },
 
