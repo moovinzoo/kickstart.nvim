@@ -806,6 +806,13 @@ require('lazy').setup({
         return '%2l:%-2v'
       end
 
+      -- Enable tabline
+      require('mini.tabline').setup {
+        show_icons = true,
+        set_vim_settings = true,
+        tab_page_section = 'left',
+      }
+
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
