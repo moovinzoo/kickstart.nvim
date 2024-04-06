@@ -78,6 +78,12 @@ vim.opt.scrolloff = 5
 -- Enable title
 vim.opt.title = true
 
+-- Set universal tab settings
+vim.opt.tabstop = 8
+vim.opt.softtabstop = 0
+vim.opt.expandtab = false
+vim.opt.shiftwidth = 8
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
