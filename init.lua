@@ -1041,6 +1041,8 @@ require('lazy').setup({
           end
         end,
       })
+
+      vim.keymap.set('n', '<leader>n', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true, desc = 'Toggle [N]vimTree' })
     end,
   },
 
