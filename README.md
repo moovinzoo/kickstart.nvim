@@ -289,10 +289,10 @@ sudo dnf install -y gcc make git ripgrep fd-find neovim
 - [x] Make keymaps for traversing quickfix items
 - [x] Make keymaps for navigating buffers
 - [x] Enable tagbar support
-<!-- TODO: Setup universal tabstops -->
-- [ ] Configure universal tabstop
+- [x] Configure universal tabstop
 <!-- TODO: Setup LSP; java, javascript, docker, lua(opt), python(opt) -->
 - [ ] Setup lsp; java, javascript, docker
-<!-- TODO: Enable feature/window-async-terminal w/window-async-terminal, w/vim-test-->
+<!-- TODO: Enable feature/window-async-terminal w/window-async-terminal, w/vim-test -->
 - [ ] Setup window-async-terminal
+<!-- TODO: Install optional plugins -->
 - [ ] Add plugins; startify, vimwiki, nvim-java(optional)
