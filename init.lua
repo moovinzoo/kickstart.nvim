@@ -911,7 +911,7 @@ require('lazy').setup({
     'preservim/tagbar',
     config = function()
       -- set initial width
-      vim.g.tagbar_width = 35
+      vim.g.tagbar_width = 32
       -- hide help banner
       vim.g.tagbar_compact = 2
       -- to be sorted according to their order
