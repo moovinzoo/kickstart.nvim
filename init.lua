@@ -5,9 +5,14 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
 
--- disable netrw at the very start of your init.lua
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- -- disable netrw at the very start of your init.lua
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
+
+-- Netrw(built-in) setting
+vim.g.netrw_liststyle = 3
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -1008,43 +1013,43 @@ require('lazy').setup({
     end,
   },
 
-  {
-    'nvim-tree/nvim-tree.lua',
-    version = '*',
-    lazy = false,
-    dependencies = {
-      'nvim-tree/nvim-web-devicons',
-    },
-    config = function()
-      require('nvim-tree').setup {}
-
-      -- Auto close solution based on QuitPre that checks if it's the last window with aware of floating-windows
-      vim.api.nvim_create_autocmd('QuitPre', {
-        callback = function()
-          local tree_wins = {}
-          local floating_wins = {}
-          local wins = vim.api.nvim_list_wins()
-          for _, w in ipairs(wins) do
-            local bufname = vim.api.nvim_buf_get_name(vim.api.nvim_win_get_buf(w))
-            if bufname:match 'NvimTree_' ~= nil then
-              table.insert(tree_wins, w)
-            end
-            if vim.api.nvim_win_get_config(w).relative ~= '' then
-              table.insert(floating_wins, w)
-            end
-          end
-          if 1 == #wins - #floating_wins - #tree_wins then
-            -- Should quit, so we close all invalid windows.
-            for _, w in ipairs(tree_wins) do
-              vim.api.nvim_win_close(w, true)
-            end
-          end
-        end,
-      })
-
-      vim.keymap.set('n', '<leader>n', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true, desc = 'Toggle [N]vimTree' })
-    end,
-  },
+  -- {
+  --   'nvim-tree/nvim-tree.lua',
+  --   version = '*',
+  --   lazy = false,
+  --   dependencies = {
+  --     'nvim-tree/nvim-web-devicons',
+  --   },
+  --   config = function()
+  --     require('nvim-tree').setup {}
+  --
+  --     -- Auto close solution based on QuitPre that checks if it's the last window with aware of floating-windows
+  --     vim.api.nvim_create_autocmd('QuitPre', {
+  --       callback = function()
+  --         local tree_wins = {}
+  --         local floating_wins = {}
+  --         local wins = vim.api.nvim_list_wins()
+  --         for _, w in ipairs(wins) do
+  --           local bufname = vim.api.nvim_buf_get_name(vim.api.nvim_win_get_buf(w))
+  --           if bufname:match 'NvimTree_' ~= nil then
+  --             table.insert(tree_wins, w)
+  --           end
+  --           if vim.api.nvim_win_get_config(w).relative ~= '' then
+  --             table.insert(floating_wins, w)
+  --           end
+  --         end
+  --         if 1 == #wins - #floating_wins - #tree_wins then
+  --           -- Should quit, so we close all invalid windows.
+  --           for _, w in ipairs(tree_wins) do
+  --             vim.api.nvim_win_close(w, true)
+  --           end
+  --         end
+  --       end,
+  --     })
+  --
+  --     vim.keymap.set('n', '<leader>n', '<cmd>NvimTreeToggle<CR>', { noremap = true, silent = true, desc = 'Toggle [N]vimTree' })
+  --   end,
+  -- },
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
