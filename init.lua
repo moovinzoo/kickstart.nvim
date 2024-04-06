@@ -5,7 +5,7 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
 
--- -- disable netrw at the very start of your init.lua
+-- -- disable netrw at the very start of your init.lua to enable nvim-tree instead
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
 
