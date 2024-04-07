@@ -158,6 +158,18 @@ vim.api.nvim_create_autocmd('BufReadPost', {
   end,
 })
 
+-- Local settings for quickfix window
+vim.api.nvim_create_autocmd('FileType', {
+  desc = 'Improve UI of quickfix/location-list window',
+  pattern = 'qf',
+  group = vim.api.nvim_create_augroup('setlocal-to-qf-window', { clear = true }),
+  callback = function()
+    vim.opt_local.nu = true
+    vim.opt_local.numberwidth = 1
+    vim.opt_local.wrap = false
+  end,
+})
+
 -- -- Closes terminal buffers if the job exited without error
 -- vim.cmd.autocmd "TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | endif"
 
