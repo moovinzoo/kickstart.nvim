@@ -107,6 +107,9 @@ vim.keymap.set('n', 'Q', '<cmd>q<CR>', { noremap = true, silent = true, desc = '
 vim.keymap.set({ 'i', 'c' }, '<C-a>', '<Home>', { noremap = true, silent = true, desc = 'Go to Home' })
 vim.keymap.set({ 'i', 'c' }, '<C-e>', '<End>', { noremap = true, silent = true, desc = 'Go to End' })
 
+-- Substitue <C-c> to <C-[> in Insert-mode to prevent diagnostic terminated
+vim.keymap.set('i', '<C-c>', '<C-[>', { noremap = true, silent = true, desc = 'Substitute <C-c> to <C-[>' })
+
 -- Support quickfix item traverse
 vim.keymap.set('n', ']q', '<cmd>:cnext<CR>', { noremap = true, silent = true, desc = 'Go to next [Q]uickfix item' })
 vim.keymap.set('n', '[q', '<cmd>:cprevious<CR>', { noremap = true, silent = true, desc = 'Go to prev [Q]uickfix item' })
