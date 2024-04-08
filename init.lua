@@ -592,6 +592,13 @@ require('lazy').setup({
             },
           },
         },
+
+        jdtls = {
+          -- cmd = {...},
+          -- filetypes = {...},
+          -- capabilities = {...},
+          -- settings = {...},
+        },
       }
 
       -- Ensure the servers and tools above are installed
